@@ -54,6 +54,9 @@
     <ClCompile Include="BasePotion.cpp">
       <Filter>Item</Filter>
     </ClCompile>
+    <ClCompile Include="BaseCharacter.cpp">
+      <Filter>Actor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">

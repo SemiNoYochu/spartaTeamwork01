@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor.h" />
+    <ClCompile Include="BaseCharacter.cpp" />
     <ClCompile Include="BaseItem.cpp" />
     <ClCompile Include="BasePotion.cpp" />
     <ClCompile Include="GameManager.cpp" />
