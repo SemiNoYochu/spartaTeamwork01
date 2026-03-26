@@ -16,6 +16,9 @@
     <Filter Include="GameManager">
       <UniqueIdentifier>{924a6ec7-43f5-4b2a-ae06-423dc7409439}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Monster">
+      <UniqueIdentifier>{3aa83fc5-e29c-4832-98a7-d5c72ce20e64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,6 +27,9 @@
     <ClCompile Include="GameManager.cpp">
       <Filter>GameManager</Filter>
     </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Monster</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -31,6 +37,9 @@
     </ClInclude>
     <ClInclude Include="NewHeader.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Monster</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
