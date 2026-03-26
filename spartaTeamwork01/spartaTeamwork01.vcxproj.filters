@@ -33,6 +33,9 @@
     <ClCompile Include="Monster.cpp">
       <Filter>Monster</Filter>
     </ClCompile>
+    <ClCompile Include="Actor.h">
+      <Filter>Actor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -43,9 +46,6 @@
     </ClInclude>
     <ClInclude Include="Monster.h">
       <Filter>Monster</Filter>
-    </ClInclude>
-    <ClInclude Include="Actor.h">
-      <Filter>Actor</Filter>
     </ClInclude>
     <ClInclude Include="BaseCharacter.h">
       <Filter>Actor</Filter>
