@@ -25,6 +25,9 @@
     <Filter Include="Shop">
       <UniqueIdentifier>{2ed375de-a20c-49b2-8c1c-4e1c5049c41d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Item">
+      <UniqueIdentifier>{55ee5105-2021-4339-bb1a-29395b87c57c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -42,6 +45,15 @@
     <ClCompile Include="Shop.cpp">
       <Filter>Shop</Filter>
     </ClCompile>
+    <ClCompile Include="ItemSpawnManager.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseItem.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
+    <ClCompile Include="BasePotion.cpp">
+      <Filter>Item</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -58,6 +70,15 @@
     </ClInclude>
     <ClInclude Include="Shop.h">
       <Filter>Shop</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemSpawnManager.h">
+      <Filter>Item</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseItem.h">
+      <Filter>Item</Filter>
+    </ClInclude>
+    <ClInclude Include="BasePotion.h">
+      <Filter>Item</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
