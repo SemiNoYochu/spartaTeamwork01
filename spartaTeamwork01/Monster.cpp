@@ -1,58 +1,33 @@
-#include "Monster.h"
+﻿#include "Monster.h"
 #include <iostream>
-#include <cstdlib>
+#include <algorithm>
 
-// Monster
-Monster::Monster(int h, int a, int d, std::string n)
-    : hp(h), atk(a), def(d), name(n) {
+// --- Golem 구현 ---
+void Golem::Attack(Actor* Target) {
+    // 가상 함수인 GetAtk(), GetDef()를 통해 수치를 가져옴
+    int Damage = std::max(1, GetAtk() - Target->GetDef());
+
+    int NewHP = Target->GetHP() - Damage;
+    Target->SetHP(NewHP);
+
+    std::cout << GetName() << "이(가) 주먹으로 " << Target->GetName() << "을 공격!\n";
+    std::cout << "데미지: " << Damage << " (상대 남은 HP: " << Target->GetHP() << ")\n";
 }
 
-std::string Monster::getName() const
-{
-    return name;
+// --- Orc 구현 ---
+void Orc::Attack(Actor* Target) {
+    int Damage = std::max(1, GetAtk() - Target->GetDef());
+    Target->SetHP(Target->GetHP() - Damage);
+
+    std::cout << GetName() << "이(가) 몽둥이로 " << Target->GetName() << "을 공격!\n";
+    std::cout << "데미지: " << Damage << " (상대 남은 HP: " << Target->GetHP() << ")\n";
 }
 
-int Monster::getHP() const
-{
-    return hp;
-}
+// --- Slime 구현 ---
+void Slime::Attack(Actor* Target) {
+    int Damage = std::max(1, GetAtk() - Target->GetDef());
+    Target->SetHP(Target->GetHP() - Damage);
 
-void Monster::takeDamage(int damage)
-{
-    int realDamage = damage - def;
-    if (realDamage < 0) realDamage = 0;
-
-    hp -= realDamage;
-}
-
-int Monster::drop()
-{
-    return rand() % 11;
-}
-
-// Golem
-Golem::Golem() : Monster(50, 20, 5, "Golem") {}
-
-int Golem::attack()
-{
-    std::cout << "Golem attacks!\n";
-    return atk;
-}
-
-// Orc
-Orc::Orc() : Monster(80, 15, 10, "Orc") {}
-
-int Orc::attack()
-{
-    std::cout << "Orc swings a club!\n";
-    return atk;
-}
-
-// Slime
-Slime::Slime() : Monster(30, 5, 2, "Slime") {}
-
-int Slime::attack()
-{
-    std::cout << "Slime splashes!\n";
-    return atk;
+    std::cout << GetName() << "이(가) 몸통박치기로 " << Target->GetName() << "을 공격!\n";
+    std::cout << "데미지: " << Damage << " (상대 남은 HP: " << Target->GetHP() << ")\n";
 }

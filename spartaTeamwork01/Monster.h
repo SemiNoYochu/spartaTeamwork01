@@ -1,44 +1,31 @@
-#pragma once
+﻿#pragma once
+#include "Actor.h"
 #include <string>
 
-class Monster
-{
-protected:
-    int hp;
-    int atk;
-    int def;
-    std::string name;
-
+class Monster : public Actor {
 public:
-    Monster(int h, int a, int d, std::string n);
-
-    virtual int attack() = 0;
-    void takeDamage(int damage);
-    int drop();
-
-    std::string getName() const;
-    int getHP() const;
-
+    Monster(int InHP, int InAtk, int InDef, std::string InName)
+        : Actor(InHP, InAtk, InDef, InName) {
+    }
     virtual ~Monster() {}
+
+    virtual void Attack(Actor* Target) override = 0;
 };
 
-class Golem : public Monster
-{
+class Golem : public Monster {
 public:
-    Golem();
-    int attack() override;
+    Golem() : Monster(50, 20, 10, "Golem") {}
+    virtual void Attack(Actor* Target) override;
 };
 
-class Orc : public Monster
-{
+class Orc : public Monster {
 public:
-    Orc();
-    int attack() override;
+    Orc() : Monster(80, 15, 5, "Orc") {}
+    virtual void Attack(Actor* Target) override;
 };
 
-class Slime : public Monster
-{
+class Slime : public Monster {
 public:
-    Slime();
-    int attack() override;
+    Slime() : Monster(30, 10, 5, "Slime") {}
+    virtual void Attack(Actor* Target) override;
 };
