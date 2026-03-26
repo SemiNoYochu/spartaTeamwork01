@@ -22,6 +22,9 @@
     <Filter Include="Actor">
       <UniqueIdentifier>{01d98cbe-73c4-4995-b83c-e78d2a4538bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shop">
+      <UniqueIdentifier>{2ed375de-a20c-49b2-8c1c-4e1c5049c41d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,6 +39,9 @@
     <ClCompile Include="Actor.h">
       <Filter>Actor</Filter>
     </ClCompile>
+    <ClCompile Include="Shop.cpp">
+      <Filter>Shop</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -49,6 +55,9 @@
     </ClInclude>
     <ClInclude Include="BaseCharacter.h">
       <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Shop.h">
+      <Filter>Shop</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
