@@ -19,6 +19,9 @@
     <Filter Include="Monster">
       <UniqueIdentifier>{3aa83fc5-e29c-4832-98a7-d5c72ce20e64}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Actor">
+      <UniqueIdentifier>{01d98cbe-73c4-4995-b83c-e78d2a4538bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -40,6 +43,12 @@
     </ClInclude>
     <ClInclude Include="Monster.h">
       <Filter>Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseCharacter.h">
+      <Filter>Actor</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
